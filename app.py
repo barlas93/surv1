@@ -9,7 +9,6 @@ data = data.drop(columns=['Name'])
 data = data.dropna()
 
 label_encoder = LabelEncoder()
-data['Sex'] = label_encoder.fit_transform(data['Sex'])
 data['Diagnosis'] = label_encoder.fit_transform(data['Diagnosis'])
 
 X = data[['Age', 'CT', 'BMI', 'Diagnosis', 'Location', 'Resection', 'Revision']]
@@ -22,7 +21,7 @@ rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_resampled, y_resampled)
 
 def main():
-    st.markdown("<h1 style='text-align: center;'>Megaprosthesis Survival Prediction 12 months</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Megaprosthesis Survival Prediction 36 months</h1>", unsafe_allow_html=True)
     
     st.sidebar.header('Input Features')
 
