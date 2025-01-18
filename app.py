@@ -32,7 +32,7 @@ def main():
     bmi = st.sidebar.selectbox('BMI', bmi_options)
 
     CT_options = ['Chemotherapy', 'No chemotherapy']
-    CT = st.sidebar.selectbox('Chemotherapy', sex_options)
+    CT = st.sidebar.selectbox('Chemotherapy', CT_options)
 
     diagnosis_options = ['Primary', 'Metastatic', 'Non-Oncologic']
     diagnosis = st.sidebar.selectbox('Diagnosis', diagnosis_options)
